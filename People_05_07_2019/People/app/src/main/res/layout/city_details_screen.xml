@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/toolbar_color">
+        <RelativeLayout
+            android:id="@+id/backlayout"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+            <ImageView
+                android:tint="@android:color/white"
+                android:src="@drawable/back_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/txtToolbar_Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="TEXT"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_18sdp"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/placelist"
+        android:layout_width="fill_parent"
+        android:divider="@null"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:dividerHeight="0dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toolbar_layout"></ListView>
+
+</RelativeLayout>

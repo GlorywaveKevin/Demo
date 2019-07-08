@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/toolbar_color">
+        <RelativeLayout
+            android:id="@+id/backlayout"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+            <ImageView
+                android:tint="@android:color/white"
+                android:src="@drawable/back_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/txtToolbar_Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="TEXT"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_18sdp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/imgLayout"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="@dimen/_200sdp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/placeviewpager"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="190dp" />
+        <com.rd.PageIndicatorView
+            android:id="@+id/pageIndicatorView"
+            android:layout_width="wrap_content"
+            app:piv_animationType="swap"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/placeviewpager"
+            app:piv_selectedColor="@color/toolbar_color"
+            app:piv_unselectedColor="@color/cardview_dark_background"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            app:piv_radius="4dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/LocationLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLayout"
+
+        >
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="@dimen/_18sdp"
+            android:src="@drawable/ic_location"
+            android:tint="@android:color/holo_red_dark"
+            android:layout_height="@dimen/_18sdp" />
+        <TextView
+            android:id="@+id/txtLocation"
+            android:text="Location"
+            android:layout_centerVertical="true"
+            android:textColor="@color/toolbar_color"
+            android:textSize="@dimen/_12sdp"
+            android:layout_toRightOf="@+id/imgLocation"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/LocationLayout">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/LocationLayout"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+        <TextView
+            android:textColor="@color/toolbar_color"
+            android:id="@+id/txtLongDesc"
+            android:text="Long Description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

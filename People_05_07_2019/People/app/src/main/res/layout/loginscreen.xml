@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginPage">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/logintoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar_color">
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_marginTop="18sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:typeface="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:text="@string/app_name" />
+
+
+            <RelativeLayout
+                android:id="@+id/imgLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:gravity="center"
+                android:layout_below="@+id/logintoolbar">
+                <ImageView
+                    android:src="@drawable/ic_people"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp" />
+            </RelativeLayout>
+
+        <TextView
+            android:id="@+id/loginhere"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_marginTop="10dp"
+            android:text="Login Here"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/imgLayout"/>
+
+        <EditText
+            android:maxLength="20"
+            android:maxLines="1"
+            android:typeface="serif"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_below="@+id/loginhere"
+            android:drawableLeft="@drawable/ic_phone_android_black_24dp"
+            android:drawablePadding="15dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:paddingLeft="15dp"
+            android:id="@+id/mobile"
+
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/_14sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:hint="Mobile No." />
+
+
+        <EditText
+            android:maxLength="20"
+            android:maxLines="1"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:typeface="serif"
+            android:layout_below="@+id/mobile"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:drawablePadding="15dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:paddingLeft="15dp"
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:inputType="textPassword"
+
+            android:textSize="@dimen/_14sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:hint="Password" />
+
+        <RelativeLayout
+            android:id="@+id/idlogin"
+            android:layout_width="@dimen/_250sdp"
+            android:gravity="center|center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_rounded_border"
+            android:layout_below="@+id/password"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:typeface="serif"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18sdp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/idforget"
+            android:layout_below="@id/idlogin"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#797979"
+            android:typeface="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16sdp"
+            android:text="Forgot Password?" />
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/idforget"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/_16sdp"
+                android:layout_weight="1"
+                android:typeface="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New user?"/>
+            <TextView
+                android:id="@+id/createaccount"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/_16sdp"
+                android:layout_weight="1"
+                android:typeface="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

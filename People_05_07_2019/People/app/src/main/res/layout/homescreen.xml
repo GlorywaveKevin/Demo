@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/toolbar_color">
+        <TextView
+            android:id="@+id/txtToolbar_Title"
+            android:gravity="center"
+            android:text="HOME"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_18sdp"
+            android:layout_centerVertical="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/citygrid"
+        android:layout_above="@+id/tablayour"
+        android:layout_below="@+id/toolbar_layout"
+        android:numColumns="auto_fit"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:columnWidth="@dimen/_100sdp"
+        android:stretchMode="columnWidth"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </GridView>
+    <LinearLayout
+        android:id="@+id/tablayour"
+        android:orientation="horizontal"
+        android:background="@color/toolbar_color"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:weightSum="4"
+        android:layout_height="@dimen/_50sdp">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_home"
+                android:tint="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/_30sdp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_location"
+                android:tint="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/_30sdp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/tab_profile"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_profile"
+                android:tint="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/_30sdp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/tab_addplace"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_addpost"
+                android:tint="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/_30sdp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

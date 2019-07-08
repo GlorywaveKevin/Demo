@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/toolbar_color">
+        <RelativeLayout
+            android:id="@+id/backlayout"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+            <ImageView
+                android:tint="@android:color/white"
+                android:src="@drawable/back_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/txtToolbar_Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:typeface="serif"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_18sdp"/>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toolbar_layout">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <RelativeLayout
+                android:id="@+id/profilelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="180dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/imgProfile"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_header_icon"
+                    app:civ_border_width="0dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/profilelayout">
+                <EditText
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="15dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/fname"
+                    android:typeface="serif"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:inputType="none"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/border"
+                    android:hint="Name" />
+                <EditText
+
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_below="@+id/fname"
+                    android:drawableLeft="@drawable/ic_email_black_24dp"
+                    android:drawablePadding="15dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/emailaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:inputType="textEmailAddress"
+                    android:typeface="serif"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Email Address" />
+                <EditText
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+
+                    android:layout_below="@+id/emailaddress"
+                    android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+                    android:drawablePadding="15dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:inputType="textPassword"
+                    android:typeface="serif"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Password" />
+
+                <EditText
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+
+                    android:layout_below="@+id/password"
+                    android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+                    android:drawablePadding="15dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/confirmpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:inputType="textPassword"
+                    android:typeface="serif"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Confirm Password" />
+
+                <EditText
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:focusable="false"
+                    android:layout_below="@+id/confirmpassword"
+                    android:drawableLeft="@drawable/ic_phone_android_black_24dp"
+                    android:drawablePadding="15dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/phone"
+                    android:typeface="serif"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:inputType="numberDecimal"
+                    android:editable="false"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:hint="Phone Number" />
+                <RelativeLayout
+                    android:id="@+id/idlogin"
+                    android:layout_width="@dimen/_250sdp"
+                    android:gravity="center|center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_rounded_border"
+                    android:layout_below="@+id/phone"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Register"
+                        android:typeface="serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_18sdp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

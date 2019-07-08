@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/ic_icon"
+        android:src="@drawable/ic_people"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_140sdp" />
+
+    <TextView
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/toolbar_color"
+        android:gravity="center"
+        android:text="People"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/ic_icon"/>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/txtDesign"
+            android:textColor="@color/toolbar_color"
+            android:gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:text="Design And Devloped By :"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@+id/txtDesign"
+            android:textColor="@color/toolbar_color"
+            android:gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:text="Glorrywave"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>
